@@ -1,0 +1,970 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+  --mode-color:#ccc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* .........Dark mode for body .............*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light);
+  overflow-x: hidden;
+}
+body.dark {
+  --primary-color: #a855f7;        /* Adjust primary color for dark mode */
+  --primary-color-dark: #9333ea;   /* Adjust darker primary color */
+  --secondary-color: #d97706;      /* Adjust secondary color */
+  --text-dark: #f1f1f1;            /* Text color for dark mode */
+  --text-light: #d1d5db;           /* Lighter text for descriptions, etc. */
+  --background-dark: #111827;      /* Dark background color */
+  --nav-dark-bg: #1f2937;         /* Dark mode color for the navbar */
+  background-color: var(--background-dark);
+  color: var(--text-dark); 
+}
+/* Dark mode for nav */
+ body.dark nav {
+  background-color: var(--nav-dark-bg); /* Dark background for nav */
+}
+
+/* Adjust nav link colors for dark mode */
+body.dark nav ul li a {
+  color: var(--text-light); /* Light text color for nav links */
+}
+
+body.dark nav ul li a:hover {
+  color: var(--primary-color); /* Hover color for nav links */
+}
+body.dark nav ul{
+  background-color: var(--nav-dark-bg);
+}
+body.dark .mode{
+  color: #111827;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo p:hover {
+  color: var(--primary-color-dark);
+
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover{
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+#nav  a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+#nav a.active {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* ..........dark-mode ................ */
+.mode{
+  display: flex;
+  align-items: center;
+  margin-right: -2%;
+}
+.moon-sun:hover{
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+}
+.moon-sun{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: var(--mode-color);
+}
+.moon-sun :is(#moon,#sun){
+  position: absolute;
+  transition: .2s ease-in-out;
+}
+
+#sun{
+  opacity: 0;
+}
+
+body.dark #sun{
+  opacity: 1;
+}
+
+body.dark #moon{
+  opacity: 0;
+}
+/* ............................................ */
+
+/* .................Hero-section..................... */
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+  color: #9b5cd6;
+  font-size: 35px;
+}
+.title span:hover {
+  color: #8635d2;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns a {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.action__btns a:hover {
+  box-shadow: 0px 1px 7px 1px #ca8a04;
+}
+
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+
+
+/* ........................social-icon................ */
+.social-icon{
+  display: flex;
+  gap: 34px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+.social-icon .icon{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 5px 3px #9e83cd;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.social-icon .icon i {
+  color: #9333ea; /* This sets the icon color to purple */
+}
+.social-icon .icon:hover{
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+  transform: scale(1.1);
+}
+
+/* .....................About-Section...................... */
+
+.section {
+  padding-block: 5em;
+}
+
+.row {
+  align-items: center;
+  margin: 0 30px 0 30px;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+
+.col {
+  flex: 1;
+  min-width: 300px; /* Ensures columns are responsive */
+}
+
+.top-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.top-header h1 {
+  font-weight: 600;
+  color: var(--text-light); /* Fixed color for consistency */
+  margin-bottom: 10px;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px;
+  background: var(--extra-light);
+  border: 2px solid #fff;
+  box-shadow: 1px 8px 10px 2px var(--primary-color);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.about-info img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+.about-info img:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 1px 7px 4px var(--primary-color);
+}
+
+.about-info h2 {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-info p {
+  color: var(--text-light);
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-me-btn {
+  font-size: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.about-me-btn:hover {
+  background-color: var(--primary-color-dark);
+  transform: scale(1.1);
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+}
+
+/*.......................... Dark mode for About Section .......................................*/
+body.dark .about-info {
+  background-color: var(--background-dark); /* Dark background for about info */
+  box-shadow: 1px 8px 10px 2px var(--primary-color-dark); /* Adjust shadow for dark mode */
+  border-color: var(--text-light); /* Adjust border for dark mode */
+}
+
+body.dark .about-me h2 {
+  color: var(--text-light); /* Light text for dark mode */
+}
+
+body.dark .about-me p {
+  color: var(--text-light); /* Light text for dark mode */
+}
+
+body.dark .about-me-btn {
+  background-color: var(--primary-color-dark); /* Darker button background */
+  color: #fff; /* Light text color for buttons */
+}
+
+body.dark .about-me-btn:hover {
+  background-color: var(--primary-color); /* Hover effect for dark mode button */
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+}
+
+
+/* ......................About-popup(Education Section)......................... */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  width: 500px; /* Default width */
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.open-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.information{
+ padding:0 10px 0px 10px ; 
+ font-size: 17px;
+}
+
+.popup h2{
+  font-size: 38px;
+  font-weight: 500; /* Corrected font-weight */
+  margin: 15px 0 15px;
+}
+
+.popup p{
+  font-weight: 500; /* Corrected font-weight */
+  margin: 15px 0 15px;
+}
+.popup i{
+  font-weight: 800; /* Corrected font-weight */
+  margin: 15px 0 15px;
+}
+
+.popup button{
+  width: 50%;
+  margin-top: 10px;
+  padding: 5px 0;
+  background:#9b5cd6;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button:hover{
+  box-shadow: 0px 1px 7px 1px #ca8a04;
+}
+
+
+/* ....................Blur effect when popup is active .......................*/
+.popupblur section{
+  animation-delay: 0.1s;
+  filter: blur(5px);
+  
+}
+
+/*................ Dark mode for popup .............................*/
+body.dark .popup {
+  background-color: #333; /* Dark background for the popup */
+  color: #fff; /* White text for better contrast */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Adjust shadow for dark mode */
+}
+
+/* Popup heading in dark mode */
+body.dark .popup h1 {
+  color: #f1f1f1; /* Lighter color for headings */
+}
+
+/* Popup button styling in dark mode */
+body.dark .popup button {
+  background-color: #555; /* Dark background for button */
+  color: #fff; /* White text for button */
+  border: 1px solid #fff; /* White border */
+}
+
+/* Button hover effect in dark mode */
+body.dark .popup button:hover {
+  background-color: #777; /* Lighter hover background */
+  color: #000; /* Change text color on hover */
+}
+
+/* ............................skill-section........................ */
+.skill-row{
+  align-items: center;
+  margin: 0 40px 0 40px;
+  /* transition: transform 0.5s; */
+}
+/* .skill-row:hover {
+  transform: scale(1.1);
+} */
+
+
+.skill{
+  background: transparent;
+  box-shadow: 1px 8px 10px 2px var(--primary-color);
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  align-items: center;
+  background: var(--extra-light);
+}
+.skill .skill-box{
+width: 100%;
+margin: 25px 0;
+}
+.skill-box .titl{
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.skill-box .skill-bar{
+  height: 10px;
+  width: 100%;
+  border-radius: 6rem;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skill-box .skill-per{
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background:var(--primary-color);
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-bar.html{
+  animation-delay: 0.1s;
+  width: 80%;
+}
+.skill-barr.css{
+  animation-delay: 0.1s;
+  width: 70%;
+}
+.skill-bar.javascript{
+  animation-delay: 0.1s;
+  width: 60%;
+}
+.skill-bar.bootstrap{
+  animation-delay: 0.1s;
+  width: 70%;
+}
+.skill-bar.c{
+  animation-delay: 0.1s;
+  width: 60%;
+}
+.skill-bar.cpp{
+  animation-delay: 0.1s;
+  width: 80%;
+}
+.skill-bar.mysql{
+  animation-delay: 0.1s;
+  width: 70%;
+}
+
+@keyframes progress{
+  0%{
+    width: 0;
+    opacity: 1;
+  }
+   100%{
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip{
+  position: absolute;
+  right: -14px; 
+  top: -28px;
+  font-size: 9px;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 20px;
+  background:var(--primary-color-dark);
+  z-index:1;
+}
+/* Dark mode for Skill Section */
+body.dark .skill {
+  background: var(--background-dark); /* Dark background for skill boxes */
+  border: 2px solid var(--text-light); /* Light border for contrast */
+}
+
+body.dark .skill-box .titl {
+  color: var(--text-light); /* Light color for titles */
+}
+
+body.dark .skill-box .skill-bar {
+  background: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+}
+
+body.dark .skill-per {
+  background: var(--primary-color); /* Adjust skill percentage bar for dark mode */
+}
+
+/* ............projects.............. */
+.project-section {
+  padding: 50px 0;
+  max-width: var(--max-width); /* Ensure the section doesn't exceed the max width */
+  margin: 0 auto; /* Center the section */
+}
+
+.project-sec {
+  padding: 20px 20px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min width to 300px */
+  grid-gap: 40px;
+  margin-top: 50px;
+  padding: 0 1rem; /* Add padding to give spacing from the edges */
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the box without stretching */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6),#ae70e7);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.layer p {
+  color: #fff;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #9b5cd6;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+/* ..............contact-box.............
+.........Hire-me............ */
+.section{
+  padding: 5rem;
+}
+.row-contact{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+.col-contact{
+  display: flex;
+  width:50%;
+}
+.contact-info{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 20px 40px;
+  width: 100%;
+  height: 380px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.contact-info:hover{
+  transform:scale(1.1) ;
+}
+.contact-info > h2{
+  margin-bottom: 2%;
+  font-size: xx-large;
+  color: var(--text-dark);
+}
+.contact-info i{
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.contact-info p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  margin-block: 5px;
+}
+
+/* ............contact-form.............. */
+.fom-control{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-input{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-field{
+  width: 50%;
+  height: 55px;
+  background: transparent;
+  border: 2px solid #aaa;
+  padding-inline: 20px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input-subject{
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 2px solid #aaa;
+  padding-inline: 20px;
+  border-radius: 10px;
+  margin-top:10px ;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+textarea{
+  width: 100%;
+  height: 250px;
+  background: transparent;
+  border: 2px solid #aaa;
+  padding: 15px 20px;
+  color: var(--text-dark);
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+}
+
+.form-button .btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+  border: none;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  transition: transform 0.5s;
+}
+.form-button .btn:hover{
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+  transform: scale(1.1);
+}
+
+.form-button i{
+margin-left: 5px;
+}
+
+/* Toast Button Style */
+.toast-btn {
+  background-color:var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: transform 0.5s;
+}
+
+.toast-btn:hover {
+  /* background-color: var(--primary-color-dark); */
+  box-shadow: 0px 1px 5px 3px #ca8a04;
+  transform: scale(1.1);
+}
+
+/* Toast Notification Style */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--mode-color);
+  color: var(--text-dark);
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  right: 30px;
+  font-size: 17px;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.6s, transform 0.6s;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast i {
+  margin: 0 8px;
+  font-size: 18px;
+  color: orange;
+}
+
+/* Looping animation for the progress bar */
+.toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: orange;
+  animation: anim 5s linear infinite; /* Match with the setTimeout */
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+/* ...........footer.......... */
+footer {
+  background-color:rgb(251, 236, 250); /* Set to your theme's background color */
+  color: var(--text-dark); /* Set to your theme's text color */
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color:var(--text-dark); /* Highlight your name with a distinct color */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color:var(--primary-color); /* Brighter hover effect */
+}
+
+
+/* Dark Mode Footer Styling */
+body.dark footer {
+  background-color:var(--nav-dark-bg); /* Dark background for dark mode */
+  color: var(--mode-color); /* Light text color */
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+body.dark footer p {
+  margin: 0;
+}
+
+body.dark footer a {
+  color:var(--extra-light); /* Highlight your name with a bright color in dark mode */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.dark footer a:hover {
+  color:var(--primary-color); /* Brighter hover effect */
+}
+
+
+
+
+
+

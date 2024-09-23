@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+  --mode-color:#ccc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .........Dark mode for body .............*/
+body .container{
+    margin: 30px 30px 30px 30px;
+    padding: 10px 10px 30px 10px;
+    background-color:var(--mode-color);
+    border-radius: 20px;
+    border: 2px solid var(#fff);
+    box-shadow: 0px 1px 5px 3px var(--primary-color);
+    border-radius: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light);
+
+}
+body h1{
+    text-align: center;
+    color: var(--text-light);
+}
+body h3{
+    color: var(--text-light);
+    padding: 10px 20px;
+}
+body p{
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0 15px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+body img{
+    margin: 30px 10px 20px 0px;
+    max-width:100% ;
+}
+body a{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 5px 2rem;
+    outline: none;
+    color: var(--primary-color-dark);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+ .watch-now{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 4px 2rem;
+    outline: none;
+    color: var(--primary-color-dark);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .watch-now:hover{
+    background-color: var(--primary-color-dark);
+    color: #fff;
+  }
+  body a:hover{
+    background-color: var(--primary-color-dark);
+    color: #fff;
+    box-shadow: 0px 1px 3px 1px #ca8a04;
+  }
+
+  @media (width : 320px) {
+    body a{
+
+      padding: 5px 6px;
+
+    }
+   .watch-now{
+      padding: 4px 6px;
+    }
+  }

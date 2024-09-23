@@ -1,0 +1,674 @@
+@media (width < 900px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked~ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+
+
+
+/* ..........................section....................... */
+/* Styles for .section between 320px and 460px */
+@media only screen and (min-width: 320px) and (max-width: 460px) {
+  .section {
+      /* Adjust the padding, font size, or any other styles as needed */
+      padding: 20px; /* Example padding */
+      font-size: 14px; /* Example font size */
+      /* You can add more styles here */
+  }
+
+  /* Additional adjustments for child elements if needed */
+  .section h2 {
+      font-size: 18px; /* Example heading size */
+  }
+
+  .section p {
+      line-height: 1.5; /* Example line height */
+  }
+
+  .section img {
+      max-width: 100%; /* Ensure images are responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ....................hero section.................................  */
+
+/* Media Query for small screens (320px - 460px) */
+
+@media (max-width: 376px){
+  .title span {
+    font-size: 28px;
+  }
+  .description{
+    font-size: 25px;
+  }
+  .social-icon {
+    margin-left: 0%;
+  }
+}
+
+
+@media (min-width:901px) and (max-width: 1024px) {
+  .section__container {
+    margin-left: 8rem;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .section__container {
+    margin-left: 11rem;
+  }
+}
+
+
+@media (min-width: 2400px) and (max-width: 2561px) {
+  .section__container {
+    margin-left: 45rem;
+  }
+} 
+
+
+
+/* ...........................About................................ */
+
+/* Media query for screens between 320px and 460px */
+@media  (max-width: 373px){
+  .section{
+    padding:0x 10px 0 10px;
+  }
+  .row {
+    margin: 0%;
+  }
+  .about-container {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Typography adjustments for smaller screens */
+  .about-info h1 {
+    font-size: 1.5em; /* Smaller heading size */
+  }
+
+  .about-info p {
+    font-size: 0.9em; /* Smaller paragraph font size */
+    line-height: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  /* Image resizing */
+  .about-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Button adjustments */
+  .contact-button {
+    font-size: 1em;
+    padding: 12px 20px;
+    width: 100%; /* Make button full width */
+    margin: 10px 0;
+  }
+
+  /* Flexbox adjustment */
+  .about-section {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center;
+  }
+
+  /* Adjusting margins and padding */
+  .about-info {
+    padding: 10px;
+    text-align: center; /* Center text for better readability */
+  }
+}
+
+@media (min-width: 374px) and (max-width: 460px) {
+  
+  /* Adjusting the container width */
+  .about-container {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Typography adjustments for smaller screens */
+  .about-info h1 {
+    font-size: 1.5em; /* Smaller heading size */
+  }
+
+  .about-info p {
+    font-size: 0.9em; /* Smaller paragraph font size */
+    line-height: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  /* Image resizing */
+  .about-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Button adjustments */
+  .contact-button {
+    font-size: 1em;
+    padding: 12px 20px;
+    width: 100%; /* Make button full width */
+    margin: 10px 0;
+  }
+
+  /* Flexbox adjustment */
+  .about-section {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center;
+  }
+
+  /* Adjusting margins and padding */
+  .about-info {
+    padding: 10px;
+    text-align: center; /* Center text for better readability */
+  }
+}
+
+
+/* .......................skill................................................. */
+/* skill */
+
+@media (max-width: 321px) {
+  #about{
+    margin-left: 30px;
+  }
+  .section{
+    padding:0x 15px 0 0px;
+  }
+
+}
+  
+  @media (max-width: 375px) {
+    .skill-row{
+      margin: 0px;
+    }
+    .skill{
+      padding: 0 0 0 10px;
+    }
+    }
+
+    @media (width > 750px) {
+      .skill {
+        background: transparent;
+        box-shadow: 1px 8px 10px 2px var(--primary-color);
+        padding: 10px 20px 10px 20px;
+        margin: 0 60px 0 60px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        align-items: center;
+        background: var(--extra-light);
+      }
+    
+    }
+  
+  @media (min-width: 1439px) {
+    .row-contact {
+      margin-left: 90px;
+    }
+  
+    .row {
+      margin: 0 150px 0 150px;
+    }
+  
+    .skill-row {
+      margin: 0 90px 0 90px;
+    }
+  
+  }
+  
+  @media (max-width: 2560px) and (min-width: 1800px) {
+    .row-contact {
+      margin: 0px;
+      padding: 0px;
+      margin-left: 20rem;
+    }
+  
+    .skill-row {
+      margin-left: 90px;
+    }
+  
+  }
+
+/* ..................popup............................................. */
+
+/* Media query for medium screens (Laptops and tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .popup {
+    width: 80%;
+    padding: 25px;
+  }
+}
+
+/* Media query for smaller tablets and large phones */
+@media (max-width: 767px) {
+  .popup {
+    width: 80%;
+    padding: 20px;
+  }
+
+}
+
+/* Media query for small phones (Extra small screens) */
+@media (max-width: 651px) {
+  .popup {
+    width: 80%;
+    padding: 15px;
+  }
+
+  body.dark .popup {
+    width: 80%;
+    padding: 15px;
+    background-color: #222;
+    color: #eaeaea;
+  }
+  .information h1{
+    font-size: 20px;
+  } 
+  .information p{
+    font-size: 12px;
+  }
+  .popup button{
+    width: 25%;
+    font-size: 15px;
+  }
+}
+@media (max-width: 376px){
+  .project-sec {
+    width: 60%;
+    padding:40px 15px 30px 0px;
+  }
+}
+
+/* ...................................................................... */
+
+/* ..............project.......... */
+@media (min-width: 769px) and (max-width: 900px) {
+  .project-section {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+      width: 100%; /* Set width to 100% */
+      margin: 0 auto; /* Center the section itself */
+  }
+
+  .project-item {
+    width: 90%; /* Reduce width slightly */
+    max-width: 300px; /* Limit maximum width */
+    margin: 10px 0; /* Add space between items */
+    padding: 10px; /* Add padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for aesthetics */
+    border-radius: 8px; /* Optional: add rounded corners */
+  }
+}
+
+/* Project Section Media Query */
+@media (min-width:821px) and (max-width: 1200px) {
+  .project-section {
+      display: flex;
+      flex-direction: column; /* Change to column for stacking */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+      text-align: center; /* Center text inside */
+  }
+
+  .work-list {
+      display: flex; /* Use flexbox to align items in one row */
+      flex-wrap: nowrap; /* Prevent wrapping */
+      justify-content: center; /* Center items in the row */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margin */
+  }
+
+  .work-item {
+      margin: 10px; /* Add some space between items */
+  }
+  
+  .layer p{
+    font-size:12px ;
+  }
+  .layer h3{
+    font-size:15px ;
+  }.layer a{
+    font-size:15px ;
+    width: 55px;
+    height: 55px;
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .work-list {
+    margin-top: 150px;
+    padding: 40px 32px 32px 40px;
+  }
+}
+@media (max-width: 426px) {
+  .work-list {
+    margin-top: 150px;
+    padding: 50px 20px;
+    
+  }
+}
+
+@media (max-width: 375px) {
+  .project-section {
+    margin-top: 150px;
+    padding: 0 0 48px 0;
+    
+  }
+}
+@media (min-width < 321px) {
+  .work-list {
+    margin-top: 150px;
+    padding-right: 100px;
+    
+  }
+}
+
+
+/* ........................................................................... */
+
+/* ....................navbar........................................... */
+
+/* Media Queries for <=1000px */
+@media (max-width: 1000px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center the navbar items */
+    padding: 15px;
+    /* Add padding for better spacing */
+  }
+
+  .navbar ul {
+    display: none;
+    /* Hide navbar links (to replace with a hamburger menu) */
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    /* Reduce heading size for mobile */
+    margin-bottom: 10px;
+    /* Space below the heading */
+  }
+
+  .navbar .hamburger {
+    display: block;
+    /* Show hamburger icon for mobile */
+    font-size: 2rem;
+    /* Make it prominent */
+    cursor: pointer;
+  }
+
+  /* When the hamburger menu is clicked (toggle class), show the menu */
+  .navbar.open ul {
+    display: block;
+    /* Show menu when hamburger is clicked */
+    text-align: center;
+    width: 100%;
+    /* Make it full-width */
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    /* Space between menu items */
+    font-size: 1.2rem;
+    /* Adjust font size for better readability */
+  }
+
+  .navbar ul li a {
+    padding: 10px 15px;
+    /* Larger clickable area */
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    /* Add a background for better visibility */
+  }
+
+  .navbar ul li a:hover {
+    background-color: #ddd;
+    /* Hover effect for better UX */
+  }
+}
+
+/* .................................................................................. */
+
+
+/* .........................social-icon............................................................ */
+
+@media (max-width: 900px) and (min-width: 461px) {
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 22px;
+  }
+}
+
+/* ...................................................................... */
+
+/* Media Queries for contact section*/
+/* ......................................................................... */
+@media (max-width: 880px) and (min-width: 320px) {
+  .row-contact {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+  }
+
+  .col-contact {
+    width: 100%;
+    /* Make each column take full width */
+    margin-bottom: 20px;
+    /* Add some spacing between the columns */
+  }
+
+  .contact-info,
+  .form-control {
+    width: 100%;
+    /* Ensure both sections take full width */
+  }
+}
+
+@media (max-width: 500px) and (min-width: 390px) {
+
+  .contact-info h2 {
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  .contact-info p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 389px) and (min-width: 320px) {
+  #contact-span{
+    font-size: 10px;
+  }
+
+  .contact-info h2 {
+    font-weight: 300;
+    font-size: 10px;
+  }
+
+  .contact-info i {
+    font: 3px;
+  }
+
+  .contact-info p {
+    font-size: 11px;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .form-button .btn {
+    margin-left: 38%;
+    padding: 10px 10px;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 376px) {
+  .form-button .btn {
+    margin-left: 35%;
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 426px){
+  footer p{
+    font-size: 10px;
+  }
+}
+
+
+/* ............................................................................ */
+
+@media (max-width: 320px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar h1 {
+      font-size: 1.2rem;
+  }
+
+  .navbar ul {
+      display: none; /* Hide the menu by default */
+      width: 100%; /* Full width for mobile menu */
+      padding: 0;
+  }
+
+  .navbar.open ul {
+      display: flex; /* Show menu when open */
+      flex-direction: column;
+      background-color: #333;
+  }
+  .action__btns a{
+    font-size: 8px;
+    font-weight: 800;
+    padding: 1rem 1rem;
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger icon */
+      margin: 10px 0;
+  }
+
+  .hero {
+      padding: 30px 0; /* Reduced padding for smaller screens */
+  }
+
+  .title {
+      font-size: 1.5rem; /* Adjust title size */
+  }
+  .title span{
+    font-size: 25px;
+  }
+
+  .description {
+      font-size: 1.2rem; /* Adjust description size */
+  }
+
+  .section {
+      padding: 30px 10px; /* Reduced padding for sections */
+  }
+
+  .about-image {
+      width: 100%; /* Full-width image for mobile */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  .project-item {
+      width: 100%; /* Full width for project items */
+      margin: 10px 0; /* Vertical margin for spacing */
+  }
+
+  .row-contact {
+      flex-direction: column; /* Stack contact info and form */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .contact-info {
+      margin-bottom: 20px; /* Spacing between contact info and form */
+  }
+
+  .form-control input,
+  .form-control textarea {
+      width: 100%; /* Full width for form fields */
+      margin-bottom: 10px; /* Spacing between fields */
+  }
+
+  .form-button {
+      width: 100%; /* Full width for button */
+  }
+
+  footer {
+      font-size: 0.8rem; /* Smaller footer text */
+  }
+}
+
+
+
+
+

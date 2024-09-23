@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>LIGHT-AUTOMATION-SYSTEM</h1>
+            <h3>Abstract :</h3>
+            <P>I have done Light Automation System and my main objective is to save Energy. By this project, I am reducing the amount of time, a bulb used thus reducing electricity bill.The system operates by counting the number of people entering and exiting a room, ensuring that the lights remain on when people are present and automatically turning them off when the room is empty. Additionally, the system takes into account the ambient light intensity, detected by an LDR (Light Dependent Resistor), ensuring that the lights only turn on when necessary—when natural light is insufficient.
+                <h2>PROJECT COMPONENT LIST </h2>
+                <p>1.Arduino uno</p>
+                <p>2. Breadboard </p>
+                <p>3. LED</p>
+                <p>4. Resistor </p>
+                <p>5. PIR Sensor</p>
+                <p>6.LDR</p>
+                <p>7. Jumper Wire</p>
+            <h2>DESCRIPTION OF EACH COMPONENT </h2>
+            <p><i>⮚ Arduino uno :</i> Arduino Uno is a microcontroller board based on the ATmega328P (datasheet). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button.</p>
+            
+            <p><i>⮚ BreadBoard : </i>A breadboard is a solderless device for temporary prototype with electronics and test circuit designs. Most electronic components in electronic circuits can be interconnected by inserting their leads or terminals into the holes and then making connections through wires where appropriate</p>
+
+            <p><i>⮚ LED :</i> A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it. Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons. The color of the light (corresponding to the energy of the photons) is determined by the energy required for electrons to cross the band gap of the semiconductor. White light is obtained by using multiple semiconductors or a layer of light-emitting phosphor on the semiconductor device.</p>
+
+            <p><i>⮚ Resistor : </i>A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, and terminate transmission lines, among other uses.</p>
+
+            <p><i>⮚ PIR Sensors : </i>A passive infrared sensor (PIR sensor) is an electronic sensor that measures infrared (IR) light radiating from objects in its field of view. They are most often used in PIR-based motion detectors. PIR sensors are commonly used in security alarms and automatic lighting applications.</p>
+
+            <p><i>⮚ LDR : </i>A photoresistor (also known as a light-dependent resistor, LDR, or photo-conductive cell) is a passive component that decreases resistance with respect to receiving luminosity (light) on the component's sensitive surface. The resistance of a photoresistor decreases with increase in incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits</p>
+
+            <p><i>⮚ Jumper Wire : </i>Jumper cables is a smaller and more bendable corrugated cable which is used to connect antennas and other components to network cabling.</p>
+
+            <h3>PROJECT DISCUSSION :</h3>
+            <p>My project counts the number of people entering and exiting the room. Using two PIR sensors, side by side sensors, we created a SINGLE DOOR COUNTER. When a person enters a room, our counter count adds 1. If a person exits the room, the counter subtracts 1. By doing this, it can determine the people present in the room. I am also using a ldr sensor for detecting light intensity. If none of the people is greater than one and the light intensity is below the selected threshold intensity, then the light will be turned on. If people are present, but the light intensity is above the threshold, then lights will not be turned on. If the light intensity is below the selected threshold, but there are no people in the room, the lights will be turned off.</p>
+            <h3>METHODOLOGY </h3>
+            <p>● Input pin of 1st pir sensor connected to arduino digital port 5. Gnd and vcc pin connected to gnd and vcc of arduino using breadboard.</p>
+            <p>● Input pin of 2nd pir sensor connected to arduino digital port 6. Gnd and Vin pin connected to gnd and vcc of arduino using breadboard.</p>
+            <p>● LDR one pin connected to Vcc and othe pin is connected to analog pin A0 and gnd using 1k resistor</p>
+            <p>● Green, Red, Blue led input pins are connected to digital port 2 ,3 ,4 respectively. Their output pin is connected to gnd using resistors.</p>
+            <p>● When one person entered the room the no of people is one. Now ldr reading is lesser than threshold value. So lights are turned on. Now another person entered the room. So no of people becomes 2. So light is still on.</p>
+            <p>● Now two person exit the room one by one. So no of people is zero. So light is turned off though ldr reading is greater than threshold.</p>
+            <p>● If person is present in the room but light intensity is more than threshold light will turned off</p>
+            <h3>Code of Arduino uno</h3>
+            <img src="sourcecode.png" alt="img">
+            <h1>Circuit Image</h1>
+            <span class="img-sec">
+                <img src="project-ckt.png" alt="img">
+                <a href="https://github.com/Akash5697/LIGHT-AUTOMATION-SYSTEM">Visit -><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7087151815653289984/?originTrackingId=8Lj5Y2pCRSa19o0DaFlKzw%3D%3D">Watch Now -><i class="fa-brands fa-linkedin"></i></a>
+            </span>   
+        </div>
+    </div>
+</body>
+</html>

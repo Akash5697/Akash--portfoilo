@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>ECG MONITORING SYSTEM</h1>
+            <h3>Abstract :</h3>
+            <P>Heart diseases are becoming a big issue for the last few decades and many people die because of certain health problems. Therefore, heart disease cannot be taken lightly. So, there should be a technology that can monitor the heart rate and heart behavior of the patient regularly. By analyzing or monitoring the ECG signal at the initial stage the various heart disease can be prevented.
+                <p> This is the reason why We are presenting a great IoT project. In this project, we will show how can interface AD8232 ECG Sensor with NodeMCU ESP8266 Board and monitor the ECG Waveform on Serial Plotter Screen. Similarly, you can send the ECG waveform over the IoT Cloud platform and monitor the signal online from any part of the world using the PC or simply using the Smartphone. There is no need for staying in the Hospital to monitor heart activity/behavior just because you can monitor it online from anywhere. Thus, it can be said advancement in Patient Health Monitoring System.</p>
+               <p>The IoT platform that we are use here is Ubidots. Ubidots is an IoT Platform empowering innovators and industries to prototype and scale IoT projects to production. Use the Ubidots platform to send data to the cloud from any Internet-enabled device. You can then configure actions and alerts based on your real-time data and unlock the value of your data through visual tools.</p>
+                </P>
+            <h3>Aim of the Project :</h3>
+            <p>This project aims to create a robust IoT solution for continuous ECG monitoring in remote locations. Key objectives include integrating the AD8232 ECG sensor with the ESP8266 microcontroller, ensuring seamless internet connectivity for real-time data transmission to Ubidots, and implementing signal processing techniques for accurate ECG measurements. The system will be integrated with Ubidots for secure cloud storage, visualization, and user-friendly dashboards. Data analysis capabilities, including the potential use of machine learning for early anomaly detection, will be explored. The overall design emphasizes cost-effectiveness and scalability, making it suitable for telemedicine, home healthcare, and continuous health monitoring applications.
+
+                <p>This project involves integrating hardware and software components to develop a comprehensive ECG monitoring system. The AD8232 ECG sensor captures cardiac signals, processed by the ESP8266 microcontroller, which securely transmits data to the Ubidots IoT platform. Ubidots serves as a central hub for storage, visualization, and analysis, employing signal processing techniques for data accuracy. A user-friendly Ubidots dashboard enables real-time monitoring for healthcare providers and patients.</p>
+                
+                <p>The project aims to advance telemedicine by offering an accessible, cost-effective, and scalable solution for continuous ECG monitoring. The synergy between the AD8232 sensor, ESP8266 microcontroller, and Ubidots platform bridges the gap between patients and healthcare providers, enhancing overall patient care through timely interventions and informed decision-making</p>
+                                                 
+                </p>
+            <h3>Project  Overview :</h3>
+            <p>This project involves integrating hardware and software components to develop a comprehensive ECG monitoring system. The AD8232 ECG sensor captures cardiac signals, processed by the ESP8266 microcontroller, which securely transmits data to the Ubidots IoT platform. Ubidots serves as a central hub for storage, visualization, and analysis, employing signal processing techniques for data accuracy. A user-friendly Ubidots dashboard enables real-time monitoring for healthcare providers and patients.
+                The project aims to advance telemedicine by offering an accessible, cost-effective, and scalable solution for continuous ECG monitoring. The synergy between the AD8232 sensor, ESP8266 microcontroller, and Ubidots platform bridges the gap between patients and healthcare providers, enhancing overall patient care through timely interventions and informed decision-making.
+                </p>
+            <h3> REVIEW WORK </h3>
+           <p>
+            <i>Existing System:</i>
+            <p>In the existing system, traditional ECG monitoring typically involves stationary devices located in medical facilities. Patients need to visit healthcare centers to undergo ECG tests, which can be inconvenient, especially for those in remote locations or with chronic conditions requiring continuous monitoring. The data collected in these facilities might not be available to healthcare providers in real-time, limiting the speed of intervention for critical cases. Furthermore, the scalability and cost-effectiveness of such systems for widespread use, especially in telemedicine or home healthcare scenarios, may be challenging.</p>
+            
+
+            <i>Proposed System:</i>
+            <p>
+                The proposed system introduces an IoT-based ECG monitoring solution that addresses the limitations of the existing system. The AD8232 ECG sensor captures cardiac signals, and the ESP8266 microcontroller facilitates real-time processing and transmission of data. By leveraging the Ubidots IoT platform, the proposed system enables secure cloud storage, visualization, and accessibility of ECG data from remote locations. This allows healthcare providers and patients to monitor cardiac activity in real-time through a user-friendly dashboard. Signal processing techniques are implemented to refine raw ECG data, ensuring accurate measurements.
+                The proposed system promotes continuous ECG monitoring in a cost-effective and scalable manner. It significantly enhances accessibility for patients, particularly in telemedicine and home healthcare settings, fostering timely interventions and informed decision-making by healthcare providers. The combination of the AD8232 sensor, ESP8266 microcontroller, and Ubidots platform forms a cohesive solution that contributes to the advancement of remote patient monitoring and telemedicine applications.
+            </p>
+            <h3>PROJECT COMPONENT LIST</h3>
+            <p> 1. NodeMCU ESP8266</p>
+            <p>2. AD8232 ECG Sensor</p>
+            <p>3. Jumper Wires</p>
+            <p>4. Breadboard</p>
+
+            <h3>WORKING METHODOLOGY</h3>
+            <i>Step 1: Set Up the Hardware</i>
+                <p>
+                1.	Connect the AD8232 ECG sensor to the NodeMCU ESP8266 using jumper wires. The AD8232 typically has three output pins: Output, LO-, and LO+.
+                2.	Connect the Output pin of the AD8232 to an analog input pin on the NodeMCU (e.g., A0).
+                3.	Connect the LO+ & LO- to D5 & D6 of NodeMCU respectively. Supply the AD8232 kit with 3.3V VCC & Connect its GND to GND.
+                4.	Power the AD8232 using the NodeMCU's 3.3V output.
+                </p>
+
+                <i>Step 2: Install Arduino IDE and Necessary Libraries</i>
+                <p>1.	Install the Arduino IDE .</p>
+                <p> 2.	Open the Arduino IDE, go to "Sketch" -> "Include Library" -> "Manage Libraries."</p>
+                <p>
+                    3.	Search for and install the following libraries:
+                    -	Ubidots (for sending data to Ubidots)
+                    -	AD8232 (for interfacing with the ECG sensor)</p>
+                    
+                <h3>Step 3: Ubidots Account Setup</h3>
+                <p>1.	Create an account on [Ubidots](https://ubidots.com/) if you don't have one.</p>
+                <p>2.	Create a new device in Ubidots to obtain an API key	</p>
+            </p>
+            <h1>Circuit Image</h1>
+            <span class="img-sec">
+                <img src="project2_img1.png" alt="img">
+                <a href="https://github.com/Akash5697/ECG-MONITORING-SYSTEM">Visit -><i class="fa-brands fa-github"></i></a>
+            </span>   
+        </div>
+    </div>
+</body>
+</html>

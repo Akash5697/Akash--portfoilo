@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="x-icon" href="portfolio.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media-queries.css">
+  <title>Responsive Portfolio</title>
+</head>
+
+<body>
+
+  <!-- navbar-saction -->
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">
+          <p>Akash'Portfolio</p>
+        </a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+
+      <ul >
+        <li id="nav"><a href="#Hero-section">Home</a></li>
+        <li id="nav"><a href="#about-sec">About</a></li>
+        <li id="nav"><a href="#skill-sec">Skills</a></li>
+        <li id="nav"><a href="#project-sec">Projects</a></li>
+        <li id="nav"><a href="#Contact">Contact</a></li>
+        <li><a href="Form Validation-  project/index.html">Feedback</a></li>
+
+        <!-- .........Dark mode....................... -->
+        <div class="mode">
+          <div class="moon-sun" id="toggle-switch">
+            <i class="fa fa-moon" id="moon"></i>
+            <i class="fa fa-sun" id="sun"></i>
+          </div>
+        </div>
+        <!-- ......................................... -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero-section -->
+  <section class="section" id="Hero-section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span class="purple">Akash</span>
+          <div class="description"> a Passionate <br><br><span id="element"></span></div>
+          <span id="element"></span>
+        </h1>
+
+        <!-- hire me/download cv -button -->
+        <div class="action__btns">
+          <a href="#contact-info" class="hire__me">Hire Me</a>
+          <a href="AkashCV_01.pdf" download="" class="portfolio">Download CV <i class="fa-solid fa-file-pdf"></i></a>
+          <!-- <button ></button> -->
+        </div>
+
+        <!-- Social media -section -->
+        <div class="social-icon">
+          <div class="icon_circle"></div>
+          <div class="icon"><a href="https://www.facebook.com/akash.goswami.900388"><i
+                class="fa-brands fa-facebook"></i></a></div>
+          <div class="icon"><a href="https://www.instagram.com/akashgoswami_13/?hl=en"><i
+                class="fa-brands fa-instagram"></i></a></div>
+          <div class="icon"><a href="https://www.linkedin.com/in/akash-goswami5697/"><i
+                class="fa-brands fa-linkedin"></i></a></div>
+          <div class="icon"><a href="https://github.com/Akash5697"><i class="fa-brands fa-github"></i></a></div>
+        </div>
+      </div>
+
+      <!-- profile-image -->
+      <div class="image">
+        <a href="picfor2.jpg"><img src="picfor2.jpg" alt="profile" /></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About-Section -->
+  <section class="section" id="about">
+    <div class="top-header" id="about-sec">
+      <h1>About Me</h1>
+    </div>
+    <div class="row" id="popup-blure">
+      <div class="col">
+        <div class="about-info">
+          <figure class="about-me">
+            <figcaption>
+              <img src="picfor4.jpg" alt="img" class="profile">
+              <h2>Front-End Developer</h2>
+              <p>Hi, I’m Akash Goswami!</p>
+              <p>I am a passionate and dedicated technology enthusiast with a solid foundation in programming languages
+                such as C and C++. My skill set extends to web technologies, including HTML, CSS, and JavaScript, along
+                with database management using MySQL. I also leverage tools like Git and GitHub for effective version
+                control in my projects.</p>
+              <p>Beyond academics, I believe in maintaining a well-rounded lifestyle that fuels creativity and enhances
+                productivity. In my free time, you can find me playing badminton, dancing, or immersing myself in music.
+              </p>
+              <p>Feel free to explore my portfolio to see my projects and skills in action. I’m always eager to connect
+                and collaborate, so don’t hesitate to reach out!</p>
+            </figcaption>
+            <button class="about-me-btn" onclick="openPopup()">More</button>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About-popup -->
+  <div class="popup" id="popup">
+    <!-- <img src="picfor3.jpg" alt="Success Icon"> -->
+    <div class="information">
+      <h1>Educational Qualifications</h1>
+      <span>
+        <p>Bachelor of Technology (B.Tech) in Electronics & Communication Engineering at Netaji Subhash Engineering
+          College,<i> CGPA of 7.86</i></p>
+      </span>
+      <span>
+        <p>Diploma from Mallabhum Institute Of Polytechnic,with a <i>CGPA of 8.0</i></p>
+      </span>
+      <span>
+        <p>Higher Secondary from Saradamoyee High School,<br>with a percentage of<i> 73.2%</i></p>
+      </span>
+      <span>
+        <p>Secondary Education with a percentage of<i> 65.7%</i></p>
+      </span>
+
+    </div>
+    <button type="button" onclick="closePopup()">OK</button>
+  </div>
+
+  <!-- skill-section -->
+  <section class="section" id="about-skill">
+    <div class="top-header" id="skill-sec">
+      <h1>Skills</h1>
+    </div>
+    <div class="skill-row">
+      <div class="skill">
+        <div class="skill-box">
+          <span class="titl">HTML</span>
+          <div class="skill-bar html">
+            <spen class="skill-per">
+              <span class="tooltip">80%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">CSS</span>
+          <div class="skill-bar bootstrap">
+            <spen class="skill-per">
+              <span class="tooltip">70%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">JavaScript</span>
+          <div class="skill-bar javascript">
+            <spen class="skill-per">
+              <span class="tooltip">60%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">Bootstrap</span>
+          <div class="skill-bar bootstrap">
+            <spen class="skill-per">
+              <span class="tooltip">70%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">C</span>
+          <div class="skill-bar c">
+            <spen class="skill-per">
+              <span class="tooltip">60%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">c++</span>
+          <div class="skill-bar cpp">
+            <spen class="skill-per">
+              <span class="tooltip">80%</span>
+            </spen>
+          </div>
+        </div>
+        <div class="skill-box">
+          <span class="titl">MySQl</span>
+          <div class="skill-bar mysql">
+            <spen class="skill-per">
+              <span class="tooltip">70%</span>
+            </spen>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ...............projct-section................ -->
+  <section class="section">
+    <div class="project-section" id="project-section">
+      <div class="project-sec" id="project-sec">
+        <div class="top-header">
+          <h1>Projects</h1>
+        </div>
+        <div class="work-list">
+          <div class="work">
+            <img src="project1.webp" alt="img">
+            <div class="layer">
+              <h3>Web Development.</h3>
+              <p>Designed the frontend of a responsive e-commerce website, closely resembling the user interface of
+                Amazon.</p>
+              <a href="project1/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="IOT.JPG" alt="img">
+            <div class="layer">
+              <h3>IOT</h3>
+              <p>ECG Monitoring System.</p>
+              <a href="project2/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="project3.webp" alt="img">
+            <div class="layer">
+              <h3> Automation.</h3>
+              <p>Automatic Lighting System.</p>
+              <a href="Project3/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Toast Button -->
+  <div class="button-container">
+    <button id="toastBtn" class="toast-btn">Show more</button>
+  </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <p><i class="fa-solid fa-circle-exclamation"></i> New projects coming soon</p>
+  </div>
+
+
+  <!-- ..............Contact box............. -->
+  <section class="section" id="Contact">
+    <div class="top-header">
+      <h1>Contact</h1>
+      <span id="contact-span">Do you have a Project in your mind , contact me here</span>
+    </div>
+    <div class="row-contact">
+      <div class="col-contact">
+        <div class="contact-info" id="contact-info">
+          <h2>Hire me <i class="fa-solid fa-arrow-turn-down"></i></h2>
+          <p><i class="fa-regular fa-envelope"></i><i>Email:</i>akashgoswami5697@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i><i>Phone:</i>91-9547086555</p>
+        </div>
+      </div>
+
+      <div class="col-contact">
+        <div class="form-control">
+
+          <form action="https://formspree.io/f/xyzgqpbd" method="post">
+            <div class="form-input">
+              <input type="text" class="input-field" id="name" name="name" placeholder="Your Name" autocomplete="off"
+                required>
+              <input type="email" class="input-field" id="email" name="email" placeholder="Your Email"
+                autocomplete="off" required>
+            </div>
+
+            <div class="text-area">
+              <input type="text" class="input-subject" id="subject" name="subject" placeholder="subject"
+                autocomplete="off" required>
+              <textarea placeholder="Message" id="Message" name="Message" autocomplete="off" min="10"
+                required></textarea>
+            </div>
+            <div class="form-button">
+              <button class="btn" type="submit">Send<i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Mr. Akash Goswami</a> - All rights reserved 2024
+    </p>
+  </footer>
+
+
+  <!-- ..................................... -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
