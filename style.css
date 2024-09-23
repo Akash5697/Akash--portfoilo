@@ -706,6 +706,8 @@ body.dark .skill-per {
   height: 100%;
 }
 
+
+
 /* ..............contact-box.............
 .........Hire-me............ */
 .section{
@@ -870,6 +872,35 @@ margin-left: 5px;
   transition: visibility 0s, opacity 0.6s, transform 0.6s;
   transform: translateX(100%);
   animation: moveleft 0.5s linear forwards;
+}
+
+
+/* ...............Dark mode of toast button................. */
+body.dark .toast {
+  background-color: var(--nav-dark-bg); /* Dark background */
+  color: #fff;            /* Light text color */
+  padding: 15px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
+}
+
+/* Icon styling in dark mode */
+body.dark .toast i {
+  color: orange; /* Bright color for icon */
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Text styling in dark mode */
+body.dark .toast p {
+  margin: 0;
+  font-size: 16px;
 }
 
 @keyframes moveleft {
