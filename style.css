@@ -510,7 +510,7 @@ body.dark .popup button:hover {
 /* ............................skill-section........................ */
 .skill-row{
   align-items: center;
-  margin: 0 40px 0 40px;
+  margin: 0 35px 0 35px;
   /* transition: transform 0.5s; */
 }
 /* .skill-row:hover {

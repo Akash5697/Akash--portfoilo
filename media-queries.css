@@ -46,7 +46,7 @@
 @media only screen and (min-width: 320px) and (max-width: 460px) {
   .section {
       /* Adjust the padding, font size, or any other styles as needed */
-      padding: 20px; /* Example padding */
+      padding: 12px; /* Example padding */
       font-size: 14px; /* Example font size */
       /* You can add more styles here */
   }
@@ -60,14 +60,19 @@
       line-height: 1.5; /* Example line height */
   }
 
-  .section img {
-      max-width: 100%; /* Ensure images are responsive */
+  .section #img {
+      max-width: 95%; /* Ensure images are responsive */
       height: auto; /* Maintain aspect ratio */
   }
 }
 
 
-
+@media (max-width: 376px){
+  .section__container {
+    padding: 10rem 0 5rem 0;
+  }
+  
+}
 
 
 
@@ -77,10 +82,6 @@
 /* ....................hero section.................................  */
 
 /* Media Query for small screens (320px - 460px) */
-@media (max-width: 376px){
-  
-}
-
 @media (max-width: 376px){
   .title span {
     font-size: 28px;
@@ -329,7 +330,7 @@
 @media (max-width: 376px){
   .project-sec {
     /* width: 60%; */
-    padding:40px 15px 30px 0px;
+    padding:40px 0px 30px 0px;
   }
 }
 
@@ -355,8 +356,6 @@
     border-radius: 8px; /* Optional: add rounded corners */
   }
 }
-
-/* Project Section Media Query */
 
 
 @media (min-width:821px) and (max-width: 1200px) {
@@ -401,23 +400,14 @@
 }
 @media (max-width: 426px) {
   .work-list {
-    padding: 0px 10px;
+    padding: 0px 0px;
+    margin-top: 0px;
     
   }
 
 }
 
-/* @media (max-width: 375px) {
-  .project-section {
-    padding: 5px 0;
-    max-width: var(--max-width);
-    margin: 0 auto; 
-  }
-  
-  .project-sec {
-    padding: 0px 20px;
-  }
-}  */
+
 
 @media (min-width < 321px) {
   .work-list {
