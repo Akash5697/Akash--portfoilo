@@ -625,13 +625,13 @@ body.dark .skill-per {
 
 /* ............projects.............. */
 .project-section {
-  padding: 50px 0;
+  padding: 10px 0;
   max-width: var(--max-width); /* Ensure the section doesn't exceed the max width */
   margin: 0 auto; /* Center the section */
 }
 
 .project-sec {
-  padding: 20px 20px;
+  padding: 0px 20px;
 }
 
 .work-list {
