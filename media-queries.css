@@ -328,7 +328,7 @@
 }
 @media (max-width: 376px){
   .project-sec {
-    width: 60%;
+    /* width: 60%; */
     padding:40px 15px 30px 0px;
   }
 }
@@ -357,6 +357,8 @@
 }
 
 /* Project Section Media Query */
+
+
 @media (min-width:821px) and (max-width: 1200px) {
   .project-section {
       display: flex;
@@ -411,6 +413,10 @@
     padding: 0 0 48px 0;
     
   }
+  
+  
+
+
 }
 @media (min-width < 321px) {
   .work-list {
@@ -583,11 +589,11 @@
   .social-icon {
       margin: 40px 37px 50px 0px;
   }
-}
+} 
 
-@media (max-width: 426px){
+ @media (max-width: 426px){
   .title {
-    font-size: 1.5rem; /* Adjust title size */
+    font-size: 1.5rem; 
 }
 .title span{
   font-size: 25px;
@@ -609,7 +615,7 @@
 
 @media (max-width: 870px) and (min-width: 770px){
   .title {
-    font-size: 2rem; /* Adjust title size */
+    font-size: 2rem; 
 }
 .title span{
   font-size: 28px;
@@ -631,7 +637,7 @@
     font-size: 28px;
   }
   
-}
+} 
 
 
 
