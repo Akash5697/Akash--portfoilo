@@ -581,7 +581,7 @@
 
 @media (max-width: 376px) {
   .social-icon {
-      margin-right: 30px;
+      margin: 40px 37px 50px 0px;
   }
 }
 
@@ -606,6 +606,34 @@
     font-size: 2px;
   }
 }
+
+@media (max-width: 870px) and (min-width: 770px){
+  .title {
+    font-size: 2rem; /* Adjust title size */
+}
+.title span{
+  font-size: 28px;
+}
+  .action__btns a{
+    font-size: 10px;
+    font-weight: 1000;
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 990px) and (min-width: 9000px){
+  .social-icon {
+  margin-right: 20px;
+}
+}
+
+@media (max-width: 1030px){
+  .title span{
+    font-size: 28px;
+  }
+  
+}
+
+
 
 
 /* ............................................................................ */
