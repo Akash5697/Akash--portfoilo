@@ -577,7 +577,13 @@
   }
 }
 
-/* .....title & action button......... */
+/* .....title & action button & footer......... */
+
+@media (max-width: 376px) {
+  .social-icon {
+      margin-right: 30px;
+  }
+}
 
 @media (max-width: 426px){
   .title {
@@ -591,9 +597,13 @@
     font-weight: 1000;
     padding: 20px 20px;
   }
+  .social-icon {
+    margin-left: 15px;
+}
+
 
   footer p{
-    font-size: 10px;
+    font-size: 2px;
   }
 }
 
