@@ -39,7 +39,7 @@
   }
 }
 
-
+/* 426px */
 
 /* ..........................section....................... */
 /* Styles for .section between 320px and 460px */
@@ -401,23 +401,20 @@
 }
 @media (max-width: 426px) {
   .work-list {
-    margin-top: 150px;
-    padding: 50px 20px;
+    padding: 0px 10px;
     
   }
+
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   .project-section {
     margin-top: 150px;
     padding: 0 0 48px 0;
     
   }
-  
-  
+} */
 
-
-}
 @media (min-width < 321px) {
   .work-list {
     margin-top: 150px;
