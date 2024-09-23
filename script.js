@@ -1,7 +1,20 @@
-// // Smooth scrolling and active link highlighting
-// // Select all nav links
+// Get all the navigation links
 const navLinks = document.querySelectorAll('#nav a');
 
+// Get the checkbox
+const checkbox = document.getElementById('check');
+
+// Add click event listener to all nav links
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    checkbox.checked = false; // Uncheck the checkbox to close the menu
+  });
+});
+
+
+
+// // Smooth scrolling and active link highlighting
+// // Select all nav links
 // Add click event listener to each nav link
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
