@@ -77,6 +77,9 @@
 /* ....................hero section.................................  */
 
 /* Media Query for small screens (320px - 460px) */
+@media (max-width: 376px){
+  
+}
 
 @media (max-width: 376px){
   .title span {
@@ -89,7 +92,6 @@
     margin-left: 0%;
   }
 }
-
 
 @media (min-width:901px) and (max-width: 1024px) {
   .section__container {
@@ -575,7 +577,21 @@
   }
 }
 
+/* .....title & action button......... */
+
 @media (max-width: 426px){
+  .title {
+    font-size: 1.5rem; /* Adjust title size */
+}
+.title span{
+  font-size: 25px;
+}
+  .action__btns a{
+    font-size: 10px;
+    font-weight: 1000;
+    padding: 20px 20px;
+  }
+
   footer p{
     font-size: 10px;
   }
