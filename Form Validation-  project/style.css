@@ -101,8 +101,55 @@ button:active{
     color: seagreen;
 }
 
+/* Default styles (Desktop/Large screens) */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 
 /* Media Queries */
+
+/* smaller devices */
+@media (max-width: 365px) {
+    .input-group label {
+        font-size: 15px;
+    }
+}
 
 /* Small Devices (Phones in portrait mode) */
 @media (max-width: 600px) {
@@ -158,5 +205,4 @@ button:active{
         padding: 16px;
     }
 }
-
 
