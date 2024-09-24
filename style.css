@@ -120,7 +120,12 @@ ul li a {
   transition: 0.3s;
 }
 
-ul li a:hover{
+#validation a:hover{
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+#validation a.active {
   border-top-color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
   color: var(--secondary-color);
